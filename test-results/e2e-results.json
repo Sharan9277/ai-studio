@@ -1,0 +1,3584 @@
+{
+  "config": {
+    "configFile": "D:\\hackathon-project\\space\\playwright.config.ts",
+    "rootDir": "D:/hackathon-project/space/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/e2e-results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/e2e-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/hackathon-project/space/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/hackathon-project/space/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/hackathon-project/space/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/hackathon-project/space/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/hackathon-project/space/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/hackathon-project/space/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/hackathon-project/space/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "D:/hackathon-project/space/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/hackathon-project/space/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "D:/hackathon-project/space/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm start",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "accessibility.spec.ts",
+      "file": "accessibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Accessibility Tests",
+          "file": "accessibility.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "semantic HTML structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-c32c2ccb02acac942b3d",
+              "file": "accessibility.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-b5f8cfeb4057bbb82ee0",
+              "file": "accessibility.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "keyboard activation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-82946d698f2b42b3cbec",
+              "file": "accessibility.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "ARIA attributes and roles",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-48a3493d546f627c31a7",
+              "file": "accessibility.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "screen reader announcements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-da8489299135a247a9fb",
+              "file": "accessibility.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "color contrast and visual accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-1ab1f3831a729f57b07a",
+              "file": "accessibility.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "form accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-45eccf661e347669f34b",
+              "file": "accessibility.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "image accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-f03dd9153b8cca11f32a",
+              "file": "accessibility.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "skip links and navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-c0794b82b64a03bcab93",
+              "file": "accessibility.spec.ts",
+              "line": 232,
+              "column": 7
+            },
+            {
+              "title": "responsive accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a6281bcb96f6303de6a9",
+              "file": "accessibility.spec.ts",
+              "line": 249,
+              "column": 7
+            },
+            {
+              "title": "motion and animation accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-c2a902edf881b156182f",
+              "file": "accessibility.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "error handling accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-9621e65c1870a85604cc",
+              "file": "accessibility.spec.ts",
+              "line": 316,
+              "column": 7
+            },
+            {
+              "title": "semantic HTML structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-33a60361355391c3ac2a",
+              "file": "accessibility.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-7851da5ba162c34e770b",
+              "file": "accessibility.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "keyboard activation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-4fc278c60c37f3290719",
+              "file": "accessibility.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "ARIA attributes and roles",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-2b7341b03e6e5307f044",
+              "file": "accessibility.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "screen reader announcements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-e2196414a441e9eb4f4c",
+              "file": "accessibility.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "color contrast and visual accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a2a96d9e6c90b9767ae3",
+              "file": "accessibility.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "form accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-4db0d76384dcdb6714b0",
+              "file": "accessibility.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "image accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-94e4884ef17695dd8445",
+              "file": "accessibility.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "skip links and navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-37ec535840837ac2c71c",
+              "file": "accessibility.spec.ts",
+              "line": 232,
+              "column": 7
+            },
+            {
+              "title": "responsive accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-3e588478972164c72cfc",
+              "file": "accessibility.spec.ts",
+              "line": 249,
+              "column": 7
+            },
+            {
+              "title": "motion and animation accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a0edf4d66976cbd0b843",
+              "file": "accessibility.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "error handling accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-1a9d948d089b50ca8d15",
+              "file": "accessibility.spec.ts",
+              "line": 316,
+              "column": 7
+            },
+            {
+              "title": "semantic HTML structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-83ec13723d675103f95d",
+              "file": "accessibility.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a26d35650f7cffe99a81",
+              "file": "accessibility.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "keyboard activation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-03e09cf935cc95385e23",
+              "file": "accessibility.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "ARIA attributes and roles",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-e63037a8046025e83769",
+              "file": "accessibility.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "screen reader announcements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a0d10cca1929ded1e9db",
+              "file": "accessibility.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "color contrast and visual accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-919285d7b78d7c29ef15",
+              "file": "accessibility.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "form accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-ab8b6454f69d2722b607",
+              "file": "accessibility.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "image accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-ebc69218dffc067d039a",
+              "file": "accessibility.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "skip links and navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-4675f844e49fc04760a0",
+              "file": "accessibility.spec.ts",
+              "line": 232,
+              "column": 7
+            },
+            {
+              "title": "responsive accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-2a658dd62ae1927a8898",
+              "file": "accessibility.spec.ts",
+              "line": 249,
+              "column": 7
+            },
+            {
+              "title": "motion and animation accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-2de772325a037ff2b81f",
+              "file": "accessibility.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "error handling accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-7a5c4b02272d2ca41dec",
+              "file": "accessibility.spec.ts",
+              "line": 316,
+              "column": 7
+            },
+            {
+              "title": "semantic HTML structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a341fdbc47efa08ff6b9",
+              "file": "accessibility.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-8c735de9092596f8c5b3",
+              "file": "accessibility.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "keyboard activation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-8888abeb197216b17ec0",
+              "file": "accessibility.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "ARIA attributes and roles",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-db894ed769c0fbe1c9ad",
+              "file": "accessibility.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "screen reader announcements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-24d4a033b9644afd669d",
+              "file": "accessibility.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "color contrast and visual accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-b1fc920da3e4a5b42c01",
+              "file": "accessibility.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "form accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-da3834de54ef986c4dc6",
+              "file": "accessibility.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "image accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-f77772ec79c418da7a14",
+              "file": "accessibility.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "skip links and navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-30c458ecd58d5dd502b4",
+              "file": "accessibility.spec.ts",
+              "line": 232,
+              "column": 7
+            },
+            {
+              "title": "responsive accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-7fcd69ec3b6feaa57edd",
+              "file": "accessibility.spec.ts",
+              "line": 249,
+              "column": 7
+            },
+            {
+              "title": "motion and animation accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-684548a57a7add8e4d2d",
+              "file": "accessibility.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "error handling accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-6863ab96519c1b8d2035",
+              "file": "accessibility.spec.ts",
+              "line": 316,
+              "column": 7
+            },
+            {
+              "title": "semantic HTML structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-ec8fe612e68d52b9ff24",
+              "file": "accessibility.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-b4f12ec9eb6d1901dd33",
+              "file": "accessibility.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "keyboard activation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-3b27409921dd649d7473",
+              "file": "accessibility.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "ARIA attributes and roles",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-07eaea5b6feb87363a85",
+              "file": "accessibility.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "screen reader announcements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-9c8d892ec711470d9981",
+              "file": "accessibility.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "color contrast and visual accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-34b2d14c7c8028062f3a",
+              "file": "accessibility.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "form accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-1273f99626a0be312d8f",
+              "file": "accessibility.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "image accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-829b1a8f1a2b5b2fb3d0",
+              "file": "accessibility.spec.ts",
+              "line": 203,
+              "column": 7
+            },
+            {
+              "title": "skip links and navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-781f79df9d0c9d0e4a24",
+              "file": "accessibility.spec.ts",
+              "line": 232,
+              "column": 7
+            },
+            {
+              "title": "responsive accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-010b6a362bf6280c8fde",
+              "file": "accessibility.spec.ts",
+              "line": 249,
+              "column": 7
+            },
+            {
+              "title": "motion and animation accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-e9525c3cdfffb92ca115",
+              "file": "accessibility.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "error handling accessibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ddd864604af8a6a0198f-a2244dc3bb1bb3ebd9d0",
+              "file": "accessibility.spec.ts",
+              "line": 316,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "critical-user-flows.spec.ts",
+      "file": "critical-user-flows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Critical User Flows",
+          "file": "critical-user-flows.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "complete image generation workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-b2a90125e80238ca7b29",
+              "file": "critical-user-flows.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "image upload validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-74a1b68402a6fda2792b",
+              "file": "critical-user-flows.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "prompt validation and security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-5a8fbb1c1e97846be877",
+              "file": "critical-user-flows.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "offline detection and recovery",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-18898c6c5b885c2e7e5e",
+              "file": "critical-user-flows.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "generation history functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-1185d7e73981c67146ce",
+              "file": "critical-user-flows.spec.ts",
+              "line": 144,
+              "column": 7
+            },
+            {
+              "title": "responsive design and mobile compatibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-593039318f333751958f",
+              "file": "critical-user-flows.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "error boundary functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-15ba9936a39c51c00d17",
+              "file": "critical-user-flows.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "accessibility features",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-9c7032a9360865e33b65",
+              "file": "critical-user-flows.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "performance and loading states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-2039d1fc12f1601978aa",
+              "file": "critical-user-flows.spec.ts",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "complete image generation workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-8578b347278d1fd4e569",
+              "file": "critical-user-flows.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "image upload validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-3bf4f6bd42845b930839",
+              "file": "critical-user-flows.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "prompt validation and security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-8d3dda96bc2af5ecd958",
+              "file": "critical-user-flows.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "offline detection and recovery",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-e91c76e5300fc6cdb1e6",
+              "file": "critical-user-flows.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "generation history functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-4fed52af37aeba40d14d",
+              "file": "critical-user-flows.spec.ts",
+              "line": 144,
+              "column": 7
+            },
+            {
+              "title": "responsive design and mobile compatibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-1acb427bacfebf7be864",
+              "file": "critical-user-flows.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "error boundary functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-bedcd213e98883d0c353",
+              "file": "critical-user-flows.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "accessibility features",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-b09cbf0941c19b1b1038",
+              "file": "critical-user-flows.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "performance and loading states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-27033e2b7d1830df6400",
+              "file": "critical-user-flows.spec.ts",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "complete image generation workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-1086296fc1b272f5ec0b",
+              "file": "critical-user-flows.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "image upload validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-645d818c5490d9b51da0",
+              "file": "critical-user-flows.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "prompt validation and security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-3d1105a2e223e46c0c2a",
+              "file": "critical-user-flows.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "offline detection and recovery",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-ca67de149e871d6c80e5",
+              "file": "critical-user-flows.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "generation history functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-e6b00db0402f40409f6a",
+              "file": "critical-user-flows.spec.ts",
+              "line": 144,
+              "column": 7
+            },
+            {
+              "title": "responsive design and mobile compatibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-923b31b5f8e48c4b920b",
+              "file": "critical-user-flows.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "error boundary functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-ec338f86cfc9f7732cc3",
+              "file": "critical-user-flows.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "accessibility features",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-77288991d932b5bd9416",
+              "file": "critical-user-flows.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "performance and loading states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-f2d6c61c02ba8e85e4c4",
+              "file": "critical-user-flows.spec.ts",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "complete image generation workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-9ffc80177d45f8efd6d5",
+              "file": "critical-user-flows.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "image upload validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-06a095c14ac026ea76cb",
+              "file": "critical-user-flows.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "prompt validation and security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-0d7b7e4ded6d77df0372",
+              "file": "critical-user-flows.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "offline detection and recovery",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-8e6be4e83f8b1ccb542a",
+              "file": "critical-user-flows.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "generation history functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-0edff477a4be90a95437",
+              "file": "critical-user-flows.spec.ts",
+              "line": 144,
+              "column": 7
+            },
+            {
+              "title": "responsive design and mobile compatibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-b2631c3aed167f3c9b9b",
+              "file": "critical-user-flows.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "error boundary functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-87beddfc78f34dda785e",
+              "file": "critical-user-flows.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "accessibility features",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-567372f90e311dc6c704",
+              "file": "critical-user-flows.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "performance and loading states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-7b5c99ab2216f51193b6",
+              "file": "critical-user-flows.spec.ts",
+              "line": 246,
+              "column": 7
+            },
+            {
+              "title": "complete image generation workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-b97fcb56a277524ad81a",
+              "file": "critical-user-flows.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "image upload validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-36e3c59808b025540ed5",
+              "file": "critical-user-flows.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "prompt validation and security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-870b9d883459183979b1",
+              "file": "critical-user-flows.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "offline detection and recovery",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-cd0b4094235dc8f04ac3",
+              "file": "critical-user-flows.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "generation history functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-9049bb3a38525cfb0e4f",
+              "file": "critical-user-flows.spec.ts",
+              "line": 144,
+              "column": 7
+            },
+            {
+              "title": "responsive design and mobile compatibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-2917ef2c83f69160498b",
+              "file": "critical-user-flows.spec.ts",
+              "line": 187,
+              "column": 7
+            },
+            {
+              "title": "error boundary functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-ee2a65f5fee83cc2d3fb",
+              "file": "critical-user-flows.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "accessibility features",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-340c0ec020d741e6a033",
+              "file": "critical-user-flows.spec.ts",
+              "line": 225,
+              "column": 7
+            },
+            {
+              "title": "performance and loading states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c4b97b05e7a934cb2f21-19ad4b09e68b768fccae",
+              "file": "critical-user-flows.spec.ts",
+              "line": 246,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "visual-regression.spec.ts",
+      "file": "visual-regression.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Visual Regression Tests",
+          "file": "visual-regression.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "homepage layout - desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-24fbc76c186ed4913974",
+              "file": "visual-regression.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-1e5427c2523697e19fca",
+              "file": "visual-regression.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f2c81940c7f67215928d",
+              "file": "visual-regression.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "upload area states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-05d6085ef956482fc48a",
+              "file": "visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "style selector states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-8ba1d43ad05e649f27c2",
+              "file": "visual-regression.spec.ts",
+              "line": 69,
+              "column": 7
+            },
+            {
+              "title": "generation process states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-da5e51cf8edc8bcb4051",
+              "file": "visual-regression.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "history section states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-afa92ba6543cab828dee",
+              "file": "visual-regression.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "error states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-5d87df786d10d68247cd",
+              "file": "visual-regression.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "offline state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d4a85784e795d75e3a61",
+              "file": "visual-regression.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "dark mode consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d2bf47832f41c4d85ee0",
+              "file": "visual-regression.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "loading spinner consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-0ddc08fb302387ed703f",
+              "file": "visual-regression.spec.ts",
+              "line": 164,
+              "column": 7
+            },
+            {
+              "title": "responsive breakpoints",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-cee3a6324b8a113828d9",
+              "file": "visual-regression.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "component interaction states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-e65a021a66ed7f3c6060",
+              "file": "visual-regression.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-bb545b642ac3fa6612fc",
+              "file": "visual-regression.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-7a8a7505e11f2764a562",
+              "file": "visual-regression.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d44e647c83e98187b0e8",
+              "file": "visual-regression.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "upload area states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-bede1ae3d1e154542bd4",
+              "file": "visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "style selector states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-a02aa8d87ba6c18077bb",
+              "file": "visual-regression.spec.ts",
+              "line": 69,
+              "column": 7
+            },
+            {
+              "title": "generation process states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-24d58f9bb07c9184cddc",
+              "file": "visual-regression.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "history section states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-82e1cdacff62665bed25",
+              "file": "visual-regression.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "error states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-b898d1e9ac058afb47fe",
+              "file": "visual-regression.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "offline state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d32aadb3de340805f3a4",
+              "file": "visual-regression.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "dark mode consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-99eda1582d53312ffcd6",
+              "file": "visual-regression.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "loading spinner consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-98ab8b5051f015b1b620",
+              "file": "visual-regression.spec.ts",
+              "line": 164,
+              "column": 7
+            },
+            {
+              "title": "responsive breakpoints",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-cb7e16da4a02d5f6754c",
+              "file": "visual-regression.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "component interaction states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-9d97204454c250a070b6",
+              "file": "visual-regression.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-e9a6934a0550e561c631",
+              "file": "visual-regression.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-82f5529c961ffb881814",
+              "file": "visual-regression.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-c0ae1025b4f9aedc1766",
+              "file": "visual-regression.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "upload area states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-01fb41181588032758e7",
+              "file": "visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "style selector states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-fe412a8e8f8f2aefa2b5",
+              "file": "visual-regression.spec.ts",
+              "line": 69,
+              "column": 7
+            },
+            {
+              "title": "generation process states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-71f9c7b9579cc19fcbe6",
+              "file": "visual-regression.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "history section states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-794aa00ba2b122f8fc9e",
+              "file": "visual-regression.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "error states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d99bc915da9144db0aa8",
+              "file": "visual-regression.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "offline state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-75e3ef75236884ece9f6",
+              "file": "visual-regression.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "dark mode consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-32dabbaef48997c33cfc",
+              "file": "visual-regression.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "loading spinner consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-deebdf2258a2346be020",
+              "file": "visual-regression.spec.ts",
+              "line": 164,
+              "column": 7
+            },
+            {
+              "title": "responsive breakpoints",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-2845c1b78cfcd3d175fe",
+              "file": "visual-regression.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "component interaction states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f725aaaf3c2758956036",
+              "file": "visual-regression.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-1a0cf6fa38d370e9e50d",
+              "file": "visual-regression.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-c4c2865cd2c14460f5f9",
+              "file": "visual-regression.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-b157e6baaefe3d4b19a8",
+              "file": "visual-regression.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "upload area states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-2b58d1ccd2f4b47da65e",
+              "file": "visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "style selector states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-cab344ff226fbdb3435b",
+              "file": "visual-regression.spec.ts",
+              "line": 69,
+              "column": 7
+            },
+            {
+              "title": "generation process states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d63b58fd1bc951b4efd6",
+              "file": "visual-regression.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "history section states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-d7020900df11c9934e75",
+              "file": "visual-regression.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "error states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-90ffb9c20ce5ef5f20c4",
+              "file": "visual-regression.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "offline state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f54da0861d9e9d2267b0",
+              "file": "visual-regression.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "dark mode consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-352908b939aafa065b97",
+              "file": "visual-regression.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "loading spinner consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-ef831b50efeb3d4633ea",
+              "file": "visual-regression.spec.ts",
+              "line": 164,
+              "column": 7
+            },
+            {
+              "title": "responsive breakpoints",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f4b0e8a59b5fc1f54b35",
+              "file": "visual-regression.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "component interaction states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-dff72e25f4a6feeac1c0",
+              "file": "visual-regression.spec.ts",
+              "line": 205,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f47999dc21cec460eb62",
+              "file": "visual-regression.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-454a5c4f341b5cc10d92",
+              "file": "visual-regression.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "homepage layout - mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-eeafa1092bfe90d168fe",
+              "file": "visual-regression.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "upload area states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-42aeb09f674a663b47f4",
+              "file": "visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "style selector states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-addc4d27e56e72c6f619",
+              "file": "visual-regression.spec.ts",
+              "line": 69,
+              "column": 7
+            },
+            {
+              "title": "generation process states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-fb2aa24a6be0b3fd0955",
+              "file": "visual-regression.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "history section states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-34efd8ea608ea02d6368",
+              "file": "visual-regression.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "error states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-0f148d47cd795e70aae1",
+              "file": "visual-regression.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "offline state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-64010b1b12ba7332fc34",
+              "file": "visual-regression.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "dark mode consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-1fd8f88eac84cd3e19e6",
+              "file": "visual-regression.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "loading spinner consistency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-488aeab6b3aaa3d4a294",
+              "file": "visual-regression.spec.ts",
+              "line": 164,
+              "column": 7
+            },
+            {
+              "title": "responsive breakpoints",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-f05c6bba66180be5cf98",
+              "file": "visual-regression.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "component interaction states",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78e23c5201ba1ea12e76-45f9087ed2dc72b9bde0",
+              "file": "visual-regression.spec.ts",
+              "line": 205,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-03T18:03:03.634Z",
+    "duration": 252.39999999999986,
+    "expected": 0,
+    "skipped": 170,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,13 +1,13 @@
 import { generateImage, ApiClient } from './mockApi';
 
-// Mock Math.random for predictable tests
-jest.spyOn(global.Math, 'random');
+const mockMathRandom = jest.spyOn(global.Math, 'random');
 
 describe('mockApi', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     jest.clearAllTimers();
     jest.useFakeTimers();
+    mockMathRandom.mockReset();
   });
 
   afterEach(() => {
@@ -22,12 +22,13 @@ describe('mockApi', () => {
     };
 
     test('successfully generates image when not error condition', async () => {
-      // Mock random to not trigger error (< 0.2)
-      (Math.random as jest.Mock).mockReturnValue(0.1);
+      mockMathRandom
+        .mockReturnValueOnce(0.1) // shouldError = false
+        .mockReturnValueOnce(0.5) // delay
+        .mockReturnValueOnce(0.5) // image selection
+        .mockReturnValueOnce(0.5); // id generation
 
       const promise = generateImage(mockRequest);
-
-      // Fast-forward time
       jest.advanceTimersByTime(2000);
 
       const result = await promise;
@@ -41,12 +42,11 @@ describe('mockApi', () => {
     });
 
     test('throws error when in error condition', async () => {
-      // Mock random to trigger error (>= 0.2)
-      (Math.random as jest.Mock).mockReturnValue(0.5);
+      mockMathRandom
+        .mockReturnValueOnce(0.5) // shouldError = true
+        .mockReturnValueOnce(0.5); // delay
 
       const promise = generateImage(mockRequest);
-
-      // Fast-forward time
       jest.advanceTimersByTime(2000);
 
       await expect(promise).rejects.toThrow(
@@ -58,7 +58,6 @@ describe('mockApi', () => {
       const controller = new AbortController();
       const promise = generateImage(mockRequest, controller.signal);
 
-      // Abort before delay completes
       controller.abort();
 
       await expect(promise).rejects.toThrow('Request aborted');
@@ -84,20 +83,23 @@ describe('mockApi', () => {
     test('retries on failure with exponential backoff', async () => {
       const client = new ApiClient();
 
-      // Mock to always fail first 2 attempts, succeed on 3rd
-      (Math.random as jest.Mock)
+      mockMathRandom
         .mockReturnValueOnce(0.5) // First attempt fails
+        .mockReturnValueOnce(0.5) // delay
         .mockReturnValueOnce(0.5) // Second attempt fails
-        .mockReturnValueOnce(0.1); // Third attempt succeeds
+        .mockReturnValueOnce(0.5) // delay
+        .mockReturnValueOnce(0.1) // Third attempt succeeds
+        .mockReturnValueOnce(0.5) // delay
+        .mockReturnValueOnce(0.5) // image selection
+        .mockReturnValueOnce(0.5); // id generation
 
       const promise = client.generateWithRetry(mockRequest, 3);
 
-      // Advance through all attempts and backoff periods
-      jest.advanceTimersByTime(2000); // First attempt delay
-      jest.advanceTimersByTime(1000); // First backoff (1s)
-      jest.advanceTimersByTime(2000); // Second attempt delay
-      jest.advanceTimersByTime(2000); // Second backoff (2s)
-      jest.advanceTimersByTime(2000); // Third attempt delay
+      jest.advanceTimersByTime(2000); // First attempt
+      jest.advanceTimersByTime(1000); // First backoff
+      jest.advanceTimersByTime(2000); // Second attempt
+      jest.advanceTimersByTime(2000); // Second backoff
+      jest.advanceTimersByTime(2000); // Third attempt
 
       const result = await promise;
       expect(result).toHaveProperty('id');
@@ -106,12 +108,14 @@ describe('mockApi', () => {
     test('gives up after max attempts', async () => {
       const client = new ApiClient();
 
-      // Mock to always fail
-      (Math.random as jest.Mock).mockReturnValue(0.5);
+      mockMathRandom
+        .mockReturnValueOnce(0.5) // First attempt fails
+        .mockReturnValueOnce(0.5) // delay
+        .mockReturnValueOnce(0.5) // Second attempt fails
+        .mockReturnValueOnce(0.5); // delay
 
       const promise = client.generateWithRetry(mockRequest, 2);
 
-      // Advance through all attempts
       jest.advanceTimersByTime(2000); // First attempt
       jest.advanceTimersByTime(1000); // First backoff
       jest.advanceTimersByTime(2000); // Second attempt
@@ -123,10 +127,8 @@ describe('mockApi', () => {
 
     test('can abort ongoing generation', async () => {
       const client = new ApiClient();
-
       const promise = client.generateWithRetry(mockRequest);
 
-      // Abort during first attempt
       client.abort();
 
       await expect(promise).rejects.toThrow('Request aborted');

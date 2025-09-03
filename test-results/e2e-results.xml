@@ -1,0 +1,712 @@
+<testsuites id="" name="" tests="170" failures="0" skipped="170" errors="0" time="0.25239999999999985">
+<testsuite name="accessibility.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="chromium" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Accessibility Tests › semantic HTML structure" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard activation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › ARIA attributes and roles" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › screen reader announcements" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › color contrast and visual accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › form accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › image accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › skip links and navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › responsive accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › motion and animation accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › error handling accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="critical-user-flows.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="chromium" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Critical User Flows › complete image generation workflow" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › image upload validation" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › prompt validation and security" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › offline detection and recovery" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › generation history functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › responsive design and mobile compatibility" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › error boundary functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › accessibility features" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › performance and loading states" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="visual-regression.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="chromium" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Visual Regression Tests › homepage layout - desktop" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - tablet" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - mobile" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › upload area states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › style selector states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › generation process states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › history section states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › error states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › offline state" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › dark mode consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › loading spinner consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › responsive breakpoints" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › component interaction states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="firefox" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Accessibility Tests › semantic HTML structure" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard activation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › ARIA attributes and roles" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › screen reader announcements" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › color contrast and visual accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › form accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › image accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › skip links and navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › responsive accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › motion and animation accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › error handling accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="critical-user-flows.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="firefox" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Critical User Flows › complete image generation workflow" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › image upload validation" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › prompt validation and security" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › offline detection and recovery" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › generation history functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › responsive design and mobile compatibility" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › error boundary functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › accessibility features" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › performance and loading states" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="visual-regression.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="firefox" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Visual Regression Tests › homepage layout - desktop" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - tablet" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - mobile" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › upload area states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › style selector states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › generation process states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › history section states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › error states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › offline state" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › dark mode consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › loading spinner consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › responsive breakpoints" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › component interaction states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="webkit" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Accessibility Tests › semantic HTML structure" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard activation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › ARIA attributes and roles" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › screen reader announcements" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › color contrast and visual accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › form accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › image accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › skip links and navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › responsive accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › motion and animation accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › error handling accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="critical-user-flows.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="webkit" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Critical User Flows › complete image generation workflow" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › image upload validation" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › prompt validation and security" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › offline detection and recovery" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › generation history functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › responsive design and mobile compatibility" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › error boundary functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › accessibility features" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › performance and loading states" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="visual-regression.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="webkit" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Visual Regression Tests › homepage layout - desktop" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - tablet" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - mobile" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › upload area states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › style selector states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › generation process states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › history section states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › error states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › offline state" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › dark mode consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › loading spinner consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › responsive breakpoints" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › component interaction states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Chrome" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Accessibility Tests › semantic HTML structure" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard activation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › ARIA attributes and roles" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › screen reader announcements" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › color contrast and visual accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › form accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › image accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › skip links and navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › responsive accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › motion and animation accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › error handling accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="critical-user-flows.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Chrome" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Critical User Flows › complete image generation workflow" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › image upload validation" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › prompt validation and security" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › offline detection and recovery" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › generation history functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › responsive design and mobile compatibility" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › error boundary functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › accessibility features" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › performance and loading states" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="visual-regression.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Chrome" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Visual Regression Tests › homepage layout - desktop" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - tablet" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - mobile" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › upload area states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › style selector states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › generation process states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › history section states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › error states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › offline state" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › dark mode consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › loading spinner consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › responsive breakpoints" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › component interaction states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Safari" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Accessibility Tests › semantic HTML structure" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › keyboard activation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › ARIA attributes and roles" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › screen reader announcements" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › color contrast and visual accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › form accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › image accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › skip links and navigation" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › responsive accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › motion and animation accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Accessibility Tests › error handling accessibility" classname="accessibility.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="critical-user-flows.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Safari" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Critical User Flows › complete image generation workflow" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › image upload validation" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › prompt validation and security" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › offline detection and recovery" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › generation history functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › responsive design and mobile compatibility" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › error boundary functionality" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › accessibility features" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Critical User Flows › performance and loading states" classname="critical-user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="visual-regression.spec.ts" timestamp="2025-09-03T18:03:03.885Z" hostname="Mobile Safari" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Visual Regression Tests › homepage layout - desktop" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - tablet" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › homepage layout - mobile" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › upload area states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › style selector states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › generation process states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › history section states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › error states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › offline state" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › dark mode consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › loading spinner consistency" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › responsive breakpoints" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Visual Regression Tests › component interaction states" classname="visual-regression.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

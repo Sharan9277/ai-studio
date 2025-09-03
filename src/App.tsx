@@ -9,8 +9,11 @@ import {
   ApiClient,
   GenerateRequest,
   GenerateResponse,
+  ErrorHandler,
 } from './services/mockApi';
 import { historyService, HistoryItem } from './services/historyService';
+import { InputValidator, SecurityValidator } from './utils/validation';
+import { useOfflineDetection } from './hooks/useOfflineDetection';
 
 const App: React.FC = () => {
   const [imageDataUrl, setImageDataUrl] = useState<string>('');
@@ -21,6 +24,10 @@ const App: React.FC = () => {
   const [generatedResult, setGeneratedResult] =
     useState<GenerateResponse | null>(null);
   const [apiClient] = useState(() => new ApiClient());
+  const [validationErrors, setValidationErrors] = useState<string[]>([]);
+  const [, setOptimisticHistoryId] = useState<string | null>(null);
+
+  const { isOnline, isConnected, checkConnectivity } = useOfflineDetection();
 
   const handleImageSelect = useCallback((_file: File, dataUrl: string) => {
     setImageDataUrl(dataUrl);
@@ -29,45 +36,86 @@ const App: React.FC = () => {
   }, []);
 
   const handleGenerate = useCallback(async () => {
-    if (!imageDataUrl) {
-      alert('Please upload an image first');
+    // Clear previous errors
+    setGenerationError(null);
+    setValidationErrors([]);
+
+    // Check network connectivity
+    if (!isOnline || !isConnected) {
+      setGenerationError(
+        'No internet connection. Please check your network and try again.'
+      );
       return;
     }
 
-    if (!prompt.trim()) {
-      alert('Please enter a prompt');
+    // Sanitize inputs
+    const sanitizedPrompt = SecurityValidator.sanitizePrompt(prompt);
+
+    const request: GenerateRequest = {
+      imageDataUrl,
+      prompt: sanitizedPrompt,
+      style: selectedStyle,
+    };
+
+    // Validate the request
+    const validation = InputValidator.validateGenerateRequest(request);
+    if (!validation.isValid) {
+      const errorMessages = validation.errors.map((error) => error.message);
+      setValidationErrors(errorMessages);
       return;
     }
 
     setIsGenerating(true);
-    setGenerationError(null);
     setGeneratedResult(null);
 
-    const request: GenerateRequest = {
-      imageDataUrl,
-      prompt: prompt.trim(),
-      style: selectedStyle,
-    };
+    // Generate optimistic ID for potential rollback
+    const optimisticId = `opt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    setOptimisticHistoryId(optimisticId);
 
     try {
       console.log('Starting generation with:', request);
+
+      // Double-check connectivity before making request
+      const stillConnected = await checkConnectivity();
+      if (!stillConnected) {
+        throw new Error('Lost connection before starting generation');
+      }
+
       const result = await apiClient.generateWithRetry(request);
       console.log('Generation completed:', result);
 
+      // Clear optimistic state
+      setOptimisticHistoryId(null);
       setGeneratedResult(result);
       historyService.addToHistory(result);
     } catch (error) {
       console.error('Generation failed:', error);
 
-      if ((error as Error).name === 'AbortError') {
-        setGenerationError('Generation was cancelled');
-      } else {
-        setGenerationError((error as Error).message || 'Generation failed');
-      }
+      // Clear optimistic state
+      setOptimisticHistoryId(null);
+
+      // Use ErrorHandler for better error messages
+      const userMessage = ErrorHandler.getUserMessage(error as Error);
+      setGenerationError(userMessage);
+
+      // Log technical details for debugging
+      console.error('Technical error details:', {
+        name: (error as Error).name,
+        message: (error as Error).message,
+        stack: (error as Error).stack,
+      });
     } finally {
       setIsGenerating(false);
     }
-  }, [imageDataUrl, prompt, selectedStyle, apiClient]);
+  }, [
+    imageDataUrl,
+    prompt,
+    selectedStyle,
+    apiClient,
+    isOnline,
+    isConnected,
+    checkConnectivity,
+  ]);
 
   const handleAbort = useCallback(() => {
     apiClient.abort();
@@ -111,11 +159,50 @@ const App: React.FC = () => {
                 maxWidth: '600px',
                 margin: '0 auto',
                 lineHeight: '1.6',
+                marginBottom: '1rem',
               }}
             >
               Transform your images with cutting-edge AI technology. Create
               stunning visuals with advanced neural networks.
             </p>
+
+            {/* Network Status Indicator */}
+            {(!isOnline || !isConnected) && (
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.5rem 1rem',
+                  backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                  color: '#ff6b6b',
+                  borderRadius: '0.5rem',
+                  fontSize: '0.875rem',
+                  border: '1px solid rgba(255, 107, 107, 0.3)',
+                }}
+                role="alert"
+              >
+                <span>🔌</span>
+                {!isOnline
+                  ? 'No internet connection'
+                  : 'Connection issues detected'}
+                <button
+                  onClick={checkConnectivity}
+                  style={{
+                    marginLeft: '0.5rem',
+                    padding: '0.25rem 0.5rem',
+                    fontSize: '0.75rem',
+                    background: 'rgba(255, 107, 107, 0.2)',
+                    border: '1px solid rgba(255, 107, 107, 0.4)',
+                    borderRadius: '0.25rem',
+                    color: '#ff6b6b',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Retry
+                </button>
+              </div>
+            )}
           </header>
 
           <main style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -139,6 +226,7 @@ const App: React.FC = () => {
                   <ImageUpload
                     onImageSelect={handleImageSelect}
                     currentImage={imageDataUrl}
+                    disabled={isGenerating || !isConnected}
                   />
 
                   <PromptInput
@@ -153,6 +241,28 @@ const App: React.FC = () => {
                     disabled={isGenerating}
                   />
 
+                  {/* Validation Errors */}
+                  {validationErrors.length > 0 && (
+                    <div
+                      className="error-message"
+                      role="alert"
+                      style={{ marginBottom: '1rem' }}
+                    >
+                      <strong>Please fix the following issues:</strong>
+                      <ul
+                        style={{
+                          margin: '0.5rem 0 0 0',
+                          paddingLeft: '1.5rem',
+                        }}
+                      >
+                        {validationErrors.map((error, index) => (
+                          <li key={index}>{error}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Generation Error */}
                   {generationError && (
                     <div className="error-message" role="alert">
                       <strong>Error:</strong> {generationError}

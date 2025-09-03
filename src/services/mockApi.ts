@@ -16,12 +16,136 @@ export interface GenerateResponse {
 
 export interface ApiError {
   message: string;
+  code: string;
+  userMessage: string;
+  retryable: boolean;
 }
 
 class AbortError extends Error {
-  constructor() {
-    super('Request aborted');
+  constructor(message: string = 'Request was cancelled') {
+    super(message);
     this.name = 'AbortError';
+  }
+}
+
+class TimeoutError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'TimeoutError';
+  }
+}
+
+class ValidationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ValidationError';
+  }
+}
+
+class NetworkError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'NetworkError';
+  }
+}
+
+class ServerError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ServerError';
+  }
+}
+
+export class ErrorHandler {
+  static categorizeError(error: Error): ApiError {
+    if (error instanceof AbortError) {
+      return {
+        message: error.message,
+        code: 'REQUEST_CANCELLED',
+        userMessage: 'Request was cancelled',
+        retryable: false,
+      };
+    }
+
+    if (error instanceof TimeoutError) {
+      return {
+        message: error.message,
+        code: 'REQUEST_TIMEOUT',
+        userMessage:
+          'Request timed out. Please check your connection and try again.',
+        retryable: true,
+      };
+    }
+
+    if (error instanceof ValidationError) {
+      return {
+        message: error.message,
+        code: 'VALIDATION_ERROR',
+        userMessage: 'Please check your inputs and try again.',
+        retryable: false,
+      };
+    }
+
+    if (error instanceof NetworkError) {
+      return {
+        message: error.message,
+        code: 'NETWORK_ERROR',
+        userMessage: 'Network error. Please check your internet connection.',
+        retryable: true,
+      };
+    }
+
+    if (error instanceof ServerError) {
+      return {
+        message: error.message,
+        code: 'SERVER_ERROR',
+        userMessage:
+          'Server is experiencing issues. Please try again in a few moments.',
+        retryable: true,
+      };
+    }
+
+    // Handle known API error messages
+    if (error.message.includes('Model overloaded')) {
+      return {
+        message: error.message,
+        code: 'MODEL_OVERLOADED',
+        userMessage:
+          'AI model is currently busy. Please wait a moment and try again.',
+        retryable: true,
+      };
+    }
+
+    if (
+      error.message.includes('quota') ||
+      error.message.includes('rate limit')
+    ) {
+      return {
+        message: error.message,
+        code: 'RATE_LIMITED',
+        userMessage:
+          'Too many requests. Please wait a moment before trying again.',
+        retryable: true,
+      };
+    }
+
+    // Default case
+    return {
+      message: error.message,
+      code: 'UNKNOWN_ERROR',
+      userMessage: 'An unexpected error occurred. Please try again.',
+      retryable: true,
+    };
+  }
+
+  static isRetryableError(error: Error): boolean {
+    const categorized = this.categorizeError(error);
+    return categorized.retryable;
+  }
+
+  static getUserMessage(error: Error): string {
+    const categorized = this.categorizeError(error);
+    return categorized.userMessage;
   }
 }
 
@@ -94,37 +218,55 @@ export const generateImage = async (
 
 export class ApiClient {
   private abortController: AbortController | null = null;
+  private requestId: number = 0;
 
   async generateWithRetry(
     request: GenerateRequest,
     maxAttempts: number = 3
   ): Promise<GenerateResponse> {
+    // Generate unique request ID for concurrency control
+    const currentRequestId = ++this.requestId;
     this.abortController = new AbortController();
 
     let lastError: Error | null = null;
 
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       try {
-        // Check if aborted before attempt
+        // Check if aborted or superseded by newer request
         if (this.abortController.signal.aborted) {
           throw new AbortError();
         }
 
-        console.log(`Generate attempt ${attempt}/${maxAttempts}`);
+        // Check if this request has been superseded
+        if (currentRequestId !== this.requestId) {
+          throw new AbortError();
+        }
 
-        const result = await generateImage(
-          request,
-          this.abortController.signal
+        console.log(
+          `Generate attempt ${attempt}/${maxAttempts} (Request ${currentRequestId})`
         );
+
+        const result = await this.withTimeout(
+          generateImage(request, this.abortController.signal),
+          30000 // 30 second timeout
+        );
+
+        // Final check before returning - ensure we haven't been superseded
+        if (currentRequestId !== this.requestId) {
+          throw new AbortError();
+        }
+
         console.log('Generation successful:', result);
         return result;
       } catch (error) {
         lastError = error as Error;
 
-        // Don't retry if aborted
+        // Don't retry if aborted, superseded, or non-retryable error
         if (
           error instanceof AbortError ||
-          (error as Error).name === 'AbortError'
+          (error as Error).name === 'AbortError' ||
+          currentRequestId !== this.requestId ||
+          !ErrorHandler.isRetryableError(error as Error)
         ) {
           throw error;
         }
@@ -133,33 +275,76 @@ export class ApiClient {
 
         // Don't wait after last attempt
         if (attempt < maxAttempts) {
-          // Exponential backoff: 1s, 2s, 4s, etc.
-          const waitTime = Math.pow(2, attempt - 1) * 1000;
+          const waitTime = this.calculateBackoffWithJitter(attempt);
           console.log(`Waiting ${waitTime}ms before retry...`);
 
-          // Wait with abort check
-          await new Promise<void>((resolve, reject) => {
-            const timeoutId = setTimeout(resolve, waitTime);
-
-            const onAbort = () => {
-              clearTimeout(timeoutId);
-              reject(new AbortError());
-            };
-
-            this.abortController?.signal.addEventListener('abort', onAbort);
-
-            setTimeout(() => {
-              this.abortController?.signal.removeEventListener(
-                'abort',
-                onAbort
-              );
-            }, waitTime);
-          });
+          await this.waitWithAbortCheck(waitTime, currentRequestId);
         }
       }
     }
 
     throw lastError || new Error('Unknown error occurred');
+  }
+
+  private calculateBackoffWithJitter(attempt: number): number {
+    // Base exponential backoff: 1s, 2s, 4s, 8s...
+    const baseDelay = Math.pow(2, attempt - 1) * 1000;
+
+    // Add jitter: ±25% of base delay to prevent thundering herd
+    const jitter = baseDelay * 0.25 * (Math.random() * 2 - 1);
+
+    // Cap at 10 seconds maximum
+    return Math.min(Math.max(baseDelay + jitter, 100), 10000);
+  }
+
+  private async waitWithAbortCheck(
+    waitTime: number,
+    requestId: number
+  ): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      const timeoutId = setTimeout(() => {
+        cleanup();
+        resolve();
+      }, waitTime);
+
+      const onAbort = () => {
+        cleanup();
+        reject(new AbortError());
+      };
+
+      const cleanup = () => {
+        clearTimeout(timeoutId);
+        this.abortController?.signal.removeEventListener('abort', onAbort);
+      };
+
+      // Check if request has been superseded
+      if (requestId !== this.requestId) {
+        cleanup();
+        reject(new AbortError());
+        return;
+      }
+
+      this.abortController?.signal.addEventListener('abort', onAbort);
+    });
+  }
+
+  private async withTimeout<T>(
+    promise: Promise<T>,
+    timeoutMs: number
+  ): Promise<T> {
+    return Promise.race([
+      promise,
+      new Promise<never>((_, reject) => {
+        const timeoutId = setTimeout(() => {
+          const error = new Error(`Request timed out after ${timeoutMs}ms`);
+          error.name = 'TimeoutError';
+          reject(error);
+        }, timeoutMs);
+
+        // Clean up timeout if original promise resolves
+        promise.finally(() => clearTimeout(timeoutId));
+      }),
+    ]);
   }
 
   abort() {
@@ -169,7 +354,9 @@ export class ApiClient {
     }
   }
 
-  isGenerating() {
-    return this.abortController && !this.abortController.signal.aborted;
+  isGenerating(): boolean {
+    return (
+      this.abortController !== null && !this.abortController.signal.aborted
+    );
   }
 }
