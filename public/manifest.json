@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "AI Studio",
+  "name": "AI Image Generation Studio",
+  "description": "Transform your images with cutting-edge AI technology. Create stunning visuals with advanced neural networks.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,10 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#0a0a0f",
+  "categories": ["productivity", "photo"],
+  "lang": "en",
+  "scope": "."
 }

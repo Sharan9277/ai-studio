@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import ImageUpload from './components/ImageUpload';
 import PromptInput from './components/PromptInput';
 import StyleSelector, { StyleOption } from './components/StyleSelector';
 import LiveSummary from './components/LiveSummary';
 import GenerationHistory from './components/GenerationHistory';
+import ErrorBoundary from './components/ErrorBoundary';
 import { ApiClient, GenerateRequest, GenerateResponse } from './services/mockApi';
 import { historyService, HistoryItem } from './services/historyService';
 
@@ -16,13 +17,13 @@ const App: React.FC = () => {
   const [generatedResult, setGeneratedResult] = useState<GenerateResponse | null>(null);
   const [apiClient] = useState(() => new ApiClient());
 
-  const handleImageSelect = (_file: File, dataUrl: string) => {
+  const handleImageSelect = useCallback((_file: File, dataUrl: string) => {
     setImageDataUrl(dataUrl);
     setGeneratedResult(null);
     setGenerationError(null);
-  };
+  }, []);
 
-  const handleGenerate = async () => {
+  const handleGenerate = useCallback(async () => {
     if (!imageDataUrl) {
       alert('Please upload an image first');
       return;
@@ -61,27 +62,31 @@ const App: React.FC = () => {
     } finally {
       setIsGenerating(false);
     }
-  };
+  }, [imageDataUrl, prompt, selectedStyle, apiClient]);
 
-  const handleAbort = () => {
+  const handleAbort = useCallback(() => {
     apiClient.abort();
     setIsGenerating(false);
-  };
+  }, [apiClient]);
 
-  const handleHistoryItemSelect = (item: HistoryItem) => {
+  const handleHistoryItemSelect = useCallback((item: HistoryItem) => {
     // Restore the generated data for comparison and further editing
     setImageDataUrl(item.imageUrl);
     setPrompt(item.prompt);
     setSelectedStyle(item.style);
     setGeneratedResult(item);
     setGenerationError(null);
-  };
+  }, []);
 
-  const canGenerate = imageDataUrl && prompt.trim() && !isGenerating;
+  const canGenerate = useMemo(
+    () => imageDataUrl && prompt.trim() && !isGenerating,
+    [imageDataUrl, prompt, isGenerating]
+  );
 
   return (
-    <div style={{ minHeight: '100vh', padding: '2rem 0' }}>
-      <div className="container">
+    <ErrorBoundary>
+      <div style={{ minHeight: '100vh', padding: '2rem 0' }}>
+        <div className="container">
         <header style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h1
             className="gradient-text"
@@ -315,8 +320,9 @@ const App: React.FC = () => {
           {/* History Section */}
           <GenerationHistory onHistoryItemSelect={handleHistoryItemSelect} />
         </main>
+        </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
 };
 
