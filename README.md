@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# AI Studio - Image Transformation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React TypeScript application that simulates an AI-powered image transformation studio. Upload images, apply different artistic styles, and manage your generation history.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Image Upload & Preview**: Drag-and-drop or click to upload PNG/JPG images (≤10MB)
+- **Client-side Image Processing**: Automatic downscaling to ≤1920px for optimal performance
+- **Style Selection**: Choose from 5 artistic styles (Editorial, Streetwear, Vintage, Minimalist, Cyberpunk)
+- **Live Preview**: Real-time summary of your image, prompt, and selected style
+- **Mock AI Generation**: Simulated API with realistic delays and error handling
+- **Retry Logic**: Exponential backoff retry system with abort functionality
+- **Generation History**: Persistent localStorage-based history (last 5 generations)
+- **Accessibility**: Full keyboard navigation, ARIA labels, and focus management
+- **Responsive Design**: Mobile-friendly interface with CSS Grid layouts
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19 + TypeScript
+- **Styling**: Custom CSS (TailwindCSS-inspired utility classes)
+- **Testing**: React Testing Library + Jest
+- **Development**: ESLint + Prettier
+- **Build**: Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 16+ and npm
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd space
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+Start the development server:
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the test suite:
+```bash
+npm test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run tests without watch mode:
+```bash
+npm test -- --watchAll=false
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Building for Production
 
-## Learn More
+Build the optimized production bundle:
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build artifacts will be stored in the `build/` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+src/
+├── components/           # React components
+│   ├── ImageUpload.tsx  # Drag-and-drop image upload
+│   ├── PromptInput.tsx  # Text prompt input field
+│   ├── StyleSelector.tsx # Style dropdown selector
+│   ├── LiveSummary.tsx  # Real-time preview component
+│   └── GenerationHistory.tsx # History management
+├── services/            # Business logic services
+│   ├── mockApi.ts       # Mock AI generation API
+│   └── historyService.ts # localStorage history management
+├── App.tsx             # Main application component
+├── index.tsx           # Application entry point
+└── index.css          # Global styles
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Design Notes
 
-### Analyzing the Bundle Size
+### Architecture Decisions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Component-based Architecture**: Each major feature is isolated in its own component with clear props interfaces
+2. **Service Layer**: Business logic separated from UI components for better testability
+3. **Custom Hooks Pattern**: History service uses event-driven updates for real-time sync across components
+4. **Error Boundaries**: Comprehensive error handling with user-friendly messages
 
-### Making a Progressive Web App
+### Performance Optimizations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Client-side Image Processing**: Images are downscaled in the browser before processing
+2. **Lazy Loading**: Components only re-render when necessary
+3. **Efficient History Management**: Only stores last 5 generations to prevent localStorage bloat
 
-### Advanced Configuration
+### Accessibility Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Full keyboard navigation support
+- ARIA labels and descriptions
+- Screen reader friendly
+- Focus management for modals and interactive elements
+- Semantic HTML structure
 
-### Deployment
+### Mock API Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The mock API simulates realistic behavior:
+- Random 1-2 second delays
+- 20% error rate for testing retry logic
+- Exponential backoff retry (1s, 2s, 4s intervals)
+- Abortable requests
+- Unique generation IDs and timestamps
 
-### `npm run build` fails to minify
+## Testing Strategy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Unit Tests**: Individual component testing with React Testing Library
+- **Integration Tests**: Service layer testing with mocked dependencies
+- **Accessibility Tests**: Built-in accessibility checks via testing-library
+- **Error Scenarios**: Comprehensive error state testing
+
+## Future Improvements
+
+- [ ] Add PWA support (service worker, manifest)
+- [ ] Implement actual AI integration
+- [ ] Add image format conversion
+- [ ] Include batch processing capabilities
+- [ ] Add export functionality (download results)
+- [ ] Implement user authentication
+- [ ] Add more artistic styles
+- [ ] Include image editing tools
+
+## Browser Support
+
+- Modern browsers supporting ES2020+
+- Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+
+## License
+
+This project is created as a coding assignment demo.
