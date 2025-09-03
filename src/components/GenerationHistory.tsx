@@ -57,7 +57,7 @@ const GenerationHistory: React.FC<GenerationHistoryProps> = ({
             marginBottom: '1rem',
             color: '#ffffff',
             textTransform: 'uppercase',
-            letterSpacing: '0.05em'
+            letterSpacing: '0.05em',
           }}
         >
           📚 Generation History
@@ -69,7 +69,9 @@ const GenerationHistory: React.FC<GenerationHistoryProps> = ({
             color: 'rgba(255, 255, 255, 0.5)',
           }}
         >
-          <p style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>🎭 No generations yet.</p>
+          <p style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>
+            🎭 No generations yet.
+          </p>
           <p style={{ fontSize: '0.875rem', marginTop: '0.5rem' }}>
             Your recent AI generations will appear here.
           </p>
@@ -94,7 +96,7 @@ const GenerationHistory: React.FC<GenerationHistoryProps> = ({
             fontWeight: '700',
             color: '#ffffff',
             textTransform: 'uppercase',
-            letterSpacing: '0.05em'
+            letterSpacing: '0.05em',
           }}
         >
           📚 Generation History
@@ -129,7 +131,8 @@ const GenerationHistory: React.FC<GenerationHistoryProps> = ({
               src={item.imageUrl}
               alt={`Generated with ${styleLabels[item.style]} style`}
               onError={(e) => {
-                (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="%23ccc"><rect width="48" height="48" rx="4"/><text x="24" y="28" text-anchor="middle" font-size="12">IMG</text></svg>';
+                (e.target as HTMLImageElement).src =
+                  'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="%23ccc"><rect width="48" height="48" rx="4"/><text x="24" y="28" text-anchor="middle" font-size="12">IMG</text></svg>';
               }}
             />
             <div style={{ flex: 1, minWidth: 0 }}>

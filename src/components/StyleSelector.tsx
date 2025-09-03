@@ -1,6 +1,11 @@
 import React from 'react';
 
-export type StyleOption = 'editorial' | 'streetwear' | 'vintage' | 'minimalist' | 'cyberpunk';
+export type StyleOption =
+  | 'editorial'
+  | 'streetwear'
+  | 'vintage'
+  | 'minimalist'
+  | 'cyberpunk';
 
 interface StyleSelectorProps {
   value: StyleOption;
@@ -8,7 +13,11 @@ interface StyleSelectorProps {
   disabled?: boolean;
 }
 
-const styleOptions: { value: StyleOption; label: string; description: string }[] = [
+const styleOptions: {
+  value: StyleOption;
+  label: string;
+  description: string;
+}[] = [
   {
     value: 'editorial',
     label: 'Editorial',

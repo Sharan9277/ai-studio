@@ -26,10 +26,10 @@ describe('mockApi', () => {
       (Math.random as jest.Mock).mockReturnValue(0.1);
 
       const promise = generateImage(mockRequest);
-      
+
       // Fast-forward time
       jest.advanceTimersByTime(2000);
-      
+
       const result = await promise;
 
       expect(result).toHaveProperty('id');
@@ -45,11 +45,13 @@ describe('mockApi', () => {
       (Math.random as jest.Mock).mockReturnValue(0.5);
 
       const promise = generateImage(mockRequest);
-      
+
       // Fast-forward time
       jest.advanceTimersByTime(2000);
-      
-      await expect(promise).rejects.toThrow('Model overloaded. Please try again.');
+
+      await expect(promise).rejects.toThrow(
+        'Model overloaded. Please try again.'
+      );
     });
 
     test('can be aborted with AbortSignal', async () => {
@@ -66,8 +68,9 @@ describe('mockApi', () => {
       const controller = new AbortController();
       controller.abort();
 
-      await expect(generateImage(mockRequest, controller.signal))
-        .rejects.toThrow('Request aborted');
+      await expect(
+        generateImage(mockRequest, controller.signal)
+      ).rejects.toThrow('Request aborted');
     });
   });
 
@@ -80,15 +83,15 @@ describe('mockApi', () => {
 
     test('retries on failure with exponential backoff', async () => {
       const client = new ApiClient();
-      
+
       // Mock to always fail first 2 attempts, succeed on 3rd
       (Math.random as jest.Mock)
         .mockReturnValueOnce(0.5) // First attempt fails
-        .mockReturnValueOnce(0.5) // Second attempt fails  
+        .mockReturnValueOnce(0.5) // Second attempt fails
         .mockReturnValueOnce(0.1); // Third attempt succeeds
 
       const promise = client.generateWithRetry(mockRequest, 3);
-      
+
       // Advance through all attempts and backoff periods
       jest.advanceTimersByTime(2000); // First attempt delay
       jest.advanceTimersByTime(1000); // First backoff (1s)
@@ -102,25 +105,27 @@ describe('mockApi', () => {
 
     test('gives up after max attempts', async () => {
       const client = new ApiClient();
-      
+
       // Mock to always fail
       (Math.random as jest.Mock).mockReturnValue(0.5);
 
       const promise = client.generateWithRetry(mockRequest, 2);
-      
+
       // Advance through all attempts
       jest.advanceTimersByTime(2000); // First attempt
       jest.advanceTimersByTime(1000); // First backoff
       jest.advanceTimersByTime(2000); // Second attempt
 
-      await expect(promise).rejects.toThrow('Model overloaded. Please try again.');
+      await expect(promise).rejects.toThrow(
+        'Model overloaded. Please try again.'
+      );
     });
 
     test('can abort ongoing generation', async () => {
       const client = new ApiClient();
-      
+
       const promise = client.generateWithRetry(mockRequest);
-      
+
       // Abort during first attempt
       client.abort();
 
@@ -129,12 +134,12 @@ describe('mockApi', () => {
 
     test('tracks generation state correctly', () => {
       const client = new ApiClient();
-      
+
       expect(client.isGenerating()).toBe(false);
-      
+
       client.generateWithRetry(mockRequest);
       expect(client.isGenerating()).toBe(true);
-      
+
       client.abort();
       expect(client.isGenerating()).toBe(false);
     });

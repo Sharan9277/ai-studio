@@ -37,9 +37,8 @@ const mockImages = [
   'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
   'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop',
   'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop'
+  'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop',
 ];
-
 
 export const generateImage = async (
   request: GenerateRequest,
@@ -52,21 +51,21 @@ export const generateImage = async (
 
   // Simulate 20% error rate
   const shouldError = Math.random() < 0.2;
-  
+
   // Simulate 1-2 second delay
   const delay = 1000 + Math.random() * 1000;
-  
+
   // Check for abort during delay
   await new Promise<void>((resolve, reject) => {
     const timeoutId = setTimeout(resolve, delay);
-    
+
     const onAbort = () => {
       clearTimeout(timeoutId);
       reject(new AbortError());
     };
-    
+
     abortSignal?.addEventListener('abort', onAbort);
-    
+
     setTimeout(() => {
       abortSignal?.removeEventListener('abort', onAbort);
     }, delay);
@@ -101,9 +100,9 @@ export class ApiClient {
     maxAttempts: number = 3
   ): Promise<GenerateResponse> {
     this.abortController = new AbortController();
-    
+
     let lastError: Error | null = null;
-    
+
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       try {
         // Check if aborted before attempt
@@ -112,46 +111,54 @@ export class ApiClient {
         }
 
         console.log(`Generate attempt ${attempt}/${maxAttempts}`);
-        
-        const result = await generateImage(request, this.abortController.signal);
+
+        const result = await generateImage(
+          request,
+          this.abortController.signal
+        );
         console.log('Generation successful:', result);
         return result;
-        
       } catch (error) {
         lastError = error as Error;
-        
+
         // Don't retry if aborted
-        if (error instanceof AbortError || (error as Error).name === 'AbortError') {
+        if (
+          error instanceof AbortError ||
+          (error as Error).name === 'AbortError'
+        ) {
           throw error;
         }
-        
+
         console.log(`Attempt ${attempt} failed:`, (error as Error).message);
-        
+
         // Don't wait after last attempt
         if (attempt < maxAttempts) {
           // Exponential backoff: 1s, 2s, 4s, etc.
           const waitTime = Math.pow(2, attempt - 1) * 1000;
           console.log(`Waiting ${waitTime}ms before retry...`);
-          
+
           // Wait with abort check
           await new Promise<void>((resolve, reject) => {
             const timeoutId = setTimeout(resolve, waitTime);
-            
+
             const onAbort = () => {
               clearTimeout(timeoutId);
               reject(new AbortError());
             };
-            
+
             this.abortController?.signal.addEventListener('abort', onAbort);
-            
+
             setTimeout(() => {
-              this.abortController?.signal.removeEventListener('abort', onAbort);
+              this.abortController?.signal.removeEventListener(
+                'abort',
+                onAbort
+              );
             }, waitTime);
           });
         }
       }
     }
-    
+
     throw lastError || new Error('Unknown error occurred');
   }
 

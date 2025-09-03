@@ -9,7 +9,9 @@ test('renders AI Studio heading', () => {
 
 test('renders upload area', () => {
   render(<App />);
-  const uploadText = screen.getByText(/Drop an image here, or click to browse/i);
+  const uploadText = screen.getByText(
+    /Drop an image here, or click to browse/i
+  );
   expect(uploadText).toBeInTheDocument();
 });
 

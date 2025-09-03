@@ -113,7 +113,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   return (
     <div className="form-group">
       <label className="form-label">Upload Image</label>
-      
+
       <div
         className={`upload-area ${isDragging ? 'dragging' : ''}`}
         onDragOver={handleDragOver}

@@ -19,18 +19,18 @@ class HistoryService {
   addToHistory(item: GenerateResponse): void {
     try {
       const history = this.getHistory();
-      
+
       // Remove item if it already exists (by id)
       const filteredHistory = history.filter((h) => h.id !== item.id);
-      
+
       // Add new item to beginning
       const updatedHistory = [item, ...filteredHistory];
-      
+
       // Keep only the last MAX_HISTORY_ITEMS items
       const trimmedHistory = updatedHistory.slice(0, MAX_HISTORY_ITEMS);
-      
+
       localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedHistory));
-      
+
       // Dispatch custom event for real-time updates
       window.dispatchEvent(
         new CustomEvent('historyUpdated', {
@@ -59,9 +59,9 @@ class HistoryService {
     try {
       const history = this.getHistory();
       const updatedHistory = history.filter((item) => item.id !== id);
-      
+
       localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedHistory));
-      
+
       window.dispatchEvent(
         new CustomEvent('historyUpdated', {
           detail: updatedHistory,
@@ -80,7 +80,7 @@ class HistoryService {
     };
 
     window.addEventListener('historyUpdated', handleUpdate);
-    
+
     // Return cleanup function
     return () => {
       window.removeEventListener('historyUpdated', handleUpdate);

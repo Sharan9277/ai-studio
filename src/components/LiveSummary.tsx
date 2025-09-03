@@ -29,7 +29,7 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
           marginBottom: '1rem',
           color: '#ffffff',
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         👁 Live Preview
@@ -54,7 +54,7 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
                 objectFit: 'cover',
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
               }}
             />
           </div>
@@ -69,7 +69,7 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
                 color: '#667eea',
                 marginBottom: '0.25rem',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.05em',
               }}
             >
               Prompt
@@ -77,7 +77,9 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
             <p
               style={{
                 fontSize: '0.875rem',
-                color: prompt ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.5)',
+                color: prompt
+                  ? 'rgba(255, 255, 255, 0.9)'
+                  : 'rgba(255, 255, 255, 0.5)',
                 fontStyle: prompt ? 'normal' : 'italic',
                 lineHeight: '1.4',
               }}
@@ -94,7 +96,7 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
                 color: '#667eea',
                 marginBottom: '0.25rem',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.05em',
               }}
             >
               Style
@@ -102,7 +104,8 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
             <span
               style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2))',
+                background:
+                  'linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2))',
                 color: '#ffffff',
                 padding: '0.5rem 1rem',
                 borderRadius: '20px',
@@ -110,7 +113,7 @@ const LiveSummary: React.FC<LiveSummaryProps> = ({
                 fontWeight: '600',
                 border: '1px solid rgba(102, 126, 234, 0.3)',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.05em',
               }}
             >
               {styleLabels[style]}
