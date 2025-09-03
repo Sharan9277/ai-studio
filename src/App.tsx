@@ -8,7 +8,6 @@ import { ApiClient, GenerateRequest, GenerateResponse } from './services/mockApi
 import { historyService, HistoryItem } from './services/historyService';
 
 const App: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [imageDataUrl, setImageDataUrl] = useState<string>('');
   const [prompt, setPrompt] = useState<string>('');
   const [selectedStyle, setSelectedStyle] = useState<StyleOption>('editorial');
@@ -17,15 +16,14 @@ const App: React.FC = () => {
   const [generatedResult, setGeneratedResult] = useState<GenerateResponse | null>(null);
   const [apiClient] = useState(() => new ApiClient());
 
-  const handleImageSelect = (file: File, dataUrl: string) => {
-    setSelectedFile(file);
+  const handleImageSelect = (_file: File, dataUrl: string) => {
     setImageDataUrl(dataUrl);
     setGeneratedResult(null);
     setGenerationError(null);
   };
 
   const handleGenerate = async () => {
-    if (!selectedFile || !imageDataUrl) {
+    if (!imageDataUrl) {
       alert('Please upload an image first');
       return;
     }
@@ -71,16 +69,15 @@ const App: React.FC = () => {
   };
 
   const handleHistoryItemSelect = (item: HistoryItem) => {
-    // We can't restore the original file, but we can restore the other data
+    // Restore the generated data for comparison and further editing
     setImageDataUrl(item.imageUrl);
     setPrompt(item.prompt);
     setSelectedStyle(item.style);
     setGeneratedResult(item);
     setGenerationError(null);
-    setSelectedFile(null); // Clear since we don't have the original file
   };
 
-  const canGenerate = selectedFile && imageDataUrl && prompt.trim() && !isGenerating;
+  const canGenerate = imageDataUrl && prompt.trim() && !isGenerating;
 
   return (
     <div style={{ minHeight: '100vh', padding: '2rem 0' }}>
@@ -109,14 +106,7 @@ const App: React.FC = () => {
         </header>
 
         <main style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '2rem',
-              marginBottom: '2rem',
-            }}
-          >
+          <div className="main-grid">
             {/* Left Column - Input Form */}
             <div>
               <div className="card ai-glow">
@@ -211,12 +201,7 @@ const App: React.FC = () => {
                   </h3>
                   
                   {/* Before/After Comparison */}
-                  <div style={{ 
-                    display: 'grid', 
-                    gridTemplateColumns: '1fr 1fr', 
-                    gap: '1.5rem',
-                    marginBottom: '1.5rem' 
-                  }}>
+                  <div className="comparison-grid">
                     {/* Original Image */}
                     <div>
                       <h4 style={{ 
@@ -267,7 +252,7 @@ const App: React.FC = () => {
                       <h4 style={{ 
                         fontSize: '0.875rem',
                         fontWeight: '600',
-                        color: '#764ba2',
+                        color: '#667eea',
                         marginBottom: '0.75rem',
                         textTransform: 'uppercase',
                         letterSpacing: '0.05em',
